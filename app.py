@@ -1,4 +1,4 @@
-from flask import Flask, render_template_string, request
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -27,8 +27,8 @@ def quiz():
             if selected == q["answer"]:
                 score += 1
 
-    return render_template_string(
-        HTML_TEMPLATE,
+    return render_templat("index.html"
+        ,
         questions=questions,
         score=score,
         total=len(questions)
