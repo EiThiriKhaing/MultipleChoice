@@ -6,7 +6,7 @@ questions = [
     {
         "question": "What is the capital of Myanmar?",
         "options": ["Yangon", "Mandalay", "Bagan", "Bago"],
-        "answer": "Paris"
+        "answer": "Yangon"
     },
     {
         "question": "Which language is used with Flask?",
@@ -27,7 +27,7 @@ def quiz():
             if selected == q["answer"]:
                 score += 1
 
-    return render_templat("index.html"
+    return render_template("index.html"
         ,
         questions=questions,
         score=score,
